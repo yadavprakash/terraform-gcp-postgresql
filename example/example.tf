@@ -3,13 +3,10 @@ provider "google" {
   region  = "asia-northeast1"
   zone    = "asia-northeast1-a"
 }
-
-#####----------------------------------------------------------------------------
-##### postgresql-db module call.
-#####----------------------------------------------------------------------------
+#------------------------------------------(postgresql-db)--------------------------------------------------------------
 module "postgresql-db" {
   source               = "../"
-  name                 = "test"
+  name                 = "dev-test"
   environment          = "postgresql-db"
   database_version     = "POSTGRES_9_6"
   zone                 = "us-central1-c"
